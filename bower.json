@@ -1,0 +1,19 @@
+{
+    "name": "CXN",
+    "description": "",
+    "authors": [
+        "Tidus <tidus2102@gmail.com>"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "latest",
+        "taffydb": "latest",
+        "moment": "latest"
+    }
+}
