@@ -27530,6 +27530,33 @@
 	                                        { className: 'page-scroll', href: '/' },
 	                                        zh ? '主頁' : 'Index'
 	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'a',
+	                                        { className: 'page-scroll', href: '/#schedule_youth' },
+	                                        zh ? '賽程' : ''
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'a',
+	                                        { className: 'page-scroll', href: '/#live' },
+	                                        zh ? '直播' : ''
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'a',
+	                                        { className: 'page-scroll', href: '/#schedule_m' },
+	                                        zh ? '戰績' : ''
+	                                    )
 	                                )
 	                            )
 	                        )
@@ -29764,6 +29791,11 @@
 	                    'div',
 	                    null,
 	                    _react2.default.createElement(
+	                        'div',
+	                        { id: 'live' },
+	                        _react2.default.createElement('iframe', { width: '640', height: '360', src: 'https://www.youtube.com/embed/live_stream?channel=UCgjUzUkWc-3DOZ3zQFYxWfQ' })
+	                    ),
+	                    _react2.default.createElement(
 	                        'section',
 	                        { id: 'schedule_m' },
 	                        _react2.default.createElement(
@@ -29865,7 +29897,7 @@
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'container' },
+	                            { className: 'container', id: 'schedule_youth' },
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'row' },

@@ -78,6 +78,15 @@ export default class Navbar extends React.Component {
                                 <li>
                                     <a className="page-scroll" href="/">{zh ? '主頁' : 'Index'}</a>
                                 </li>
+                                <li>
+                                    <a className="page-scroll" href="/#schedule_youth">{zh ? '賽程' : ''}</a>
+                                </li>
+                                <li>
+                                    <a className="page-scroll" href="/#live">{zh ? '直播' : ''}</a>
+                                </li>
+                                <li>
+                                    <a className="page-scroll" href="/#schedule_m">{zh ? '戰績' : ''}</a>
+                                </li>
                               {/*  <li>
                                     <a className="page-scroll" href="#" onClick={this.props.changeLocale}>{zh ? 'English' : '中文'}</a>
                                 </li>

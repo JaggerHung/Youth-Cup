@@ -231,6 +231,10 @@ export default class IndexPage extends React.Component {
         if(seasons && games) {
             return (
                 <div>
+                    <div id="live">
+                      <iframe width="640" height="360" src="https://www.youtube.com/embed/live_stream?channel=UCgjUzUkWc-3DOZ3zQFYxWfQ">
+                      </iframe>
+                    </div>
                     <section id="schedule_m">
                         <div className="standings container">
                             <div className="row">
@@ -277,7 +281,7 @@ export default class IndexPage extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="container">
+                        <div className="container" id="schedule_youth">
                             <div className="row">
                                 <div className="col-lg-10 col-lg-offset-1 text-center">
                                     <h2 className="section-heading">{zh ? '賽程' : 'Schedule'}</h2>
