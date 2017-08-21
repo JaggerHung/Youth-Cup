@@ -7,8 +7,7 @@
 	}
 
 	#mainHead {
-		height: auto !important;
-		min-height: inherit !important;
+		display: none !important;
 	}
 
 	#tlkio {
@@ -30,7 +29,9 @@
 	.navbar-right {
 		margin-right: 10px;
 	}
-
+	#mainHead {
+		display: none !important;
+	}
 	.navbar-default .nav>li>a {
 		color: white;
 		padding: 0px;
