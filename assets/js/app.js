@@ -29792,8 +29792,17 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        'div',
-	                        { id: 'live' },
-	                        _react2.default.createElement('iframe', { width: '640', height: '360', src: 'https://www.youtube.com/embed/live_stream?channel=UCgjUzUkWc-3DOZ3zQFYxWfQ' })
+	                        { className: 'col-md-12' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'col-md-6', id: 'live' },
+	                            _react2.default.createElement('iframe', { width: '480', height: '270', src: 'https://www.youtube.com/embed/live_stream?channel=UCgjUzUkWc-3DOZ3zQFYxWfQ' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'col-md-6', id: 'live' },
+	                            _react2.default.createElement('iframe', { width: '480', height: '270', src: 'https://www.youtube.com/embed/live_stream?channel=UCQ8sZVBYBUSkOfcSloA1_OA' })
+	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'section',
