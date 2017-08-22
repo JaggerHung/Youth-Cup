@@ -7,14 +7,14 @@
 	}
 
 	#mainHead {
-		display: none !important;
+		min-height: inherit !important;
+		height: auto !important;
 	}
 
 	#tlkio {
 		height: 300px;
 		margin-top:20px;
 	}
-
 
 	.navbar-default .nav>li>a.page-scroll {
 		color: black;
@@ -26,11 +26,13 @@
 }
 
 @media(min-width: 768px) {
+
+	#mainHead {
+		min-height: inherit !important;
+		height: auto !important;
+	}
 	.navbar-right {
 		margin-right: 10px;
-	}
-	#mainHead {
-		display: none !important;
 	}
 	.navbar-default .nav>li>a {
 		color: white;
@@ -62,8 +64,6 @@
 		border-width: 0px;
 	}
 }
-
-
 
 .textLogo{
   color:#eeeeee;
@@ -169,7 +169,6 @@ section {
 	margin-top:100px;
 
 }
-
 
 #schedule {
 	overflow-x: scroll;

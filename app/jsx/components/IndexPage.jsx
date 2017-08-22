@@ -231,12 +231,12 @@ export default class IndexPage extends React.Component {
         if(seasons && games) {
             return (
                 <div>
-                  <div className= "col-md-12">
-                    <div className="col-md-6" id="live">
+                  <div className= "col-lg-12">
+                    <div className="col-lg-6" id="live">
                       <iframe width="480" height="270" src="https://www.youtube.com/embed/live_stream?channel=UCgjUzUkWc-3DOZ3zQFYxWfQ">
                       </iframe>
                     </div>
-                    <div className="col-md-6" id="live">
+                    <div className="col-lg-6" id="live">
                       <iframe width="480" height="270" src="https://www.youtube.com/embed/live_stream?channel=UCQ8sZVBYBUSkOfcSloA1_OA">
                       </iframe>
                     </div>
