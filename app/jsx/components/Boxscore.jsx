@@ -21,7 +21,7 @@ export default class Boxscore extends React.Component {
         var url = api_host + 'games/' + game_id;
         $('#js-loading').show();
         $.ajax({
-            url: url, //Temp URL 
+            url: url, //Temp URL
             type: 'GET',
             dataType: 'JSON',
             success: function (data) {
@@ -34,11 +34,11 @@ export default class Boxscore extends React.Component {
                 console.error(status, err.toString());
             }.bind(this)
         });
-        
+
         url = api_host2 + 'games/' + game_id + '/personnel';
 
         $.ajax({
-            url: url, //Temp URL 
+            url: url, //Temp URL
             type: 'GET',
             dataType: 'JSON',
             success: function (data) {
@@ -72,7 +72,7 @@ export default class Boxscore extends React.Component {
                     if (period_stats.period > 0) {
                         total_periods.push(period_stats.period);
                         if(period_stats.period < 3) {
-                            halfs[0] = '上半場';                      
+                            halfs[0] = '上半場';
                         } else {
                             halfs[1] = '下半場';
                         }
@@ -127,7 +127,7 @@ export default class Boxscore extends React.Component {
         var minute = Math.floor(moment.duration(time).asMinutes());
         return minute + moment("2016-01-01").startOf('day').seconds(seconds).format(':ss')
     }
-    
+
     render() {
         const game = this.state.game
         const refs = this.state.refs
@@ -335,7 +335,6 @@ export default class Boxscore extends React.Component {
                                 <thead>
                                     <tr>
                                         <th>{zh ? '先發' : 'Starter'}</th>
-                                        <th>{zh ? '時間' : 'Time'}</th>
                                         <th>{zh ? '兩分' : '2Pt'}</th>
                                         <th>{zh ? '兩分%' : '2P%'}</th>
                                         <th>{zh ? '罰球' : 'FT'}</th>
@@ -344,7 +343,7 @@ export default class Boxscore extends React.Component {
                                         <th>{zh ? '三分%' : '3P%'}</th>
                                         <th>{zh ? '籃板' : 'Rebs'}</th>
                                         <th>{zh ? '進攻籃板' : 'O.Rebs'}</th>
-                                        <th>{zh ? '防守籃板' : 'D.Rebs'}</th>                                                
+                                        <th>{zh ? '防守籃板' : 'D.Rebs'}</th>
                                         <th>{zh ? '助攻' : 'Asts'}</th>
                                         <th>{zh ? '抄截' : 'Stls'}</th>
                                         <th>{zh ? '阻攻' : 'Blks'}</th>
@@ -366,7 +365,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(player.seconds).format('mm:ss')}</td>
                                                     <td>{player.two_m} - {player.two_m + player.two_a}</td>
                                                     <td>{player.two_m + player.two_a ? parseFloat(player.two_m / (player.two_m + player.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{player.ft_m} - {player.ft_m + player.ft_a}</td>
@@ -451,7 +449,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')}</td>
                                                     <td>{stat.two_m} - {stat.two_m + stat.two_a}</td>
                                                     <td>{stat.two_m + stat.two_a ? parseFloat(stat.two_m / (stat.two_m + stat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{stat.ft_m} - {stat.ft_m + stat.ft_a}</td>
@@ -495,7 +492,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')}</td>
                                                     <td>{stat.two_m} - {stat.two_m + stat.two_a}</td>
                                                     <td>{stat.two_m + stat.two_a ? parseFloat(stat.two_m / (stat.two_m + stat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{stat.ft_m} - {stat.ft_m + stat.ft_a}</td>
@@ -518,7 +514,6 @@ export default class Boxscore extends React.Component {
                                 })}
                                 <tr>
                                     <th>{zh ? '替補' : 'Sub'}</th>
-                                    <th>{zh ? '時間' : 'Time'}</th>
                                     <th>{zh ? '兩分' : '2Pt'}</th>
                                     <th>{zh ? '兩分%' : '2P%'}</th>
                                     <th>{zh ? '罰球' : 'FT'}</th>
@@ -527,7 +522,7 @@ export default class Boxscore extends React.Component {
                                     <th>{zh ? '三分%' : '3P%'}</th>
                                     <th>{zh ? '籃板' : 'Rebs'}</th>
                                     <th>{zh ? '進攻籃板' : 'O.Rebs'}</th>
-                                    <th>{zh ? '防守籃板' : 'D.Rebs'}</th>                                                
+                                    <th>{zh ? '防守籃板' : 'D.Rebs'}</th>
                                     <th>{zh ? '助攻' : 'Asts'}</th>
                                     <th>{zh ? '抄截' : 'Stls'}</th>
                                     <th>{zh ? '阻攻' : 'Blks'}</th>
@@ -536,12 +531,11 @@ export default class Boxscore extends React.Component {
                                     <th>{zh ? '得分' : 'Pts'}</th>
                                 </tr>
                                 {statlines.map(function(player, index) {
-                                    if ((player.side && !player.starter) && player.seconds) {
+                                    if (player.side && !player.starter) {
                                         if (!current_period) {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(player.seconds).format('mm:ss')}</td>
                                                     <td>{player.two_m} - {player.two_m + player.two_a}</td>
                                                     <td>{player.two_m + player.two_a ? parseFloat(player.two_m / (player.two_m + player.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{player.ft_m} - {player.ft_m + player.ft_a}</td>
@@ -626,7 +620,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')}</td>
                                                     <td>{stat.two_m} - {stat.two_m + stat.two_a}</td>
                                                     <td>{stat.two_m + stat.two_a ? parseFloat(stat.two_m / (stat.two_m + stat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{stat.ft_m} - {stat.ft_m + stat.ft_a}</td>
@@ -669,7 +662,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')}</td>
                                                     <td>{stat.two_m} - {stat.two_m + stat.two_a}</td>
                                                     <td>{stat.two_m + stat.two_a ? parseFloat(stat.two_m / (stat.two_m + stat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{stat.ft_m} - {stat.ft_m + stat.ft_a}</td>
@@ -692,7 +684,6 @@ export default class Boxscore extends React.Component {
                                 })}
                                 <tr>
                                     <th>TOTALS</th>
-                                    <th></th>
                                     <th>{zh ? '兩分' : '2Pt'}</th>
                                     <th>{zh ? '兩分%' : '2P%'}</th>
                                     <th>{zh ? '罰球' : 'FT'}</th>
@@ -701,7 +692,7 @@ export default class Boxscore extends React.Component {
                                     <th>{zh ? '三分%' : '3P%'}</th>
                                     <th>{zh ? '籃板' : 'Rebs'}</th>
                                     <th>{zh ? '進攻籃板' : 'O.Rebs'}</th>
-                                    <th>{zh ? '防守籃板' : 'D.Rebs'}</th>                                                
+                                    <th>{zh ? '防守籃板' : 'D.Rebs'}</th>
                                     <th>{zh ? '助攻' : 'Asts'}</th>
                                     <th>{zh ? '抄截' : 'Stls'}</th>
                                     <th>{zh ? '阻攻' : 'Blks'}</th>
@@ -710,7 +701,6 @@ export default class Boxscore extends React.Component {
                                     <th>{zh ? '得分' : 'Pts'}</th>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td></td>
                                     <td>{home_teamstat.two_m} - {home_teamstat.two_m + home_teamstat.two_a}</td>
                                     <td>{home_teamstat.two_m + home_teamstat.two_a ? parseFloat(home_teamstat.two_m / (home_teamstat.two_m + home_teamstat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
@@ -740,7 +730,6 @@ export default class Boxscore extends React.Component {
                                 <thead>
                                     <tr>
                                         <th>{zh ? '先發' : 'Starter'}</th>
-                                        <th>{zh ? '時間' : 'Time'}</th>
                                         <th>{zh ? '兩分' : '2Pt'}</th>
                                         <th>{zh ? '兩分%' : '2P%'}</th>
                                         <th>{zh ? '罰球' : 'FT'}</th>
@@ -749,7 +738,7 @@ export default class Boxscore extends React.Component {
                                         <th>{zh ? '三分%' : '3P%'}</th>
                                         <th>{zh ? '籃板' : 'Rebs'}</th>
                                         <th>{zh ? '進攻籃板' : 'O.Rebs'}</th>
-                                        <th>{zh ? '防守籃板' : 'D.Rebs'}</th>                                                
+                                        <th>{zh ? '防守籃板' : 'D.Rebs'}</th>
                                         <th>{zh ? '助攻' : 'Asts'}</th>
                                         <th>{zh ? '抄截' : 'Stls'}</th>
                                         <th>{zh ? '阻攻' : 'Blks'}</th>
@@ -771,7 +760,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(player.seconds).format('mm:ss')}</td>
                                                     <td>{player.two_m} - {player.two_m + player.two_a}</td>
                                                     <td>{player.two_m + player.two_a ? parseFloat(player.two_m / (player.two_m + player.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{player.ft_m} - {player.ft_m + player.ft_a}</td>
@@ -855,8 +843,7 @@ export default class Boxscore extends React.Component {
 
                                             return (
                                                 <tr key={index}>
-                                                    <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - <Link to={`/stat/${player.player_id}`}>{player.name_alt}</Link></td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')}</td>
+                                                    <td>{player.jersey < 10 ? "0" : ""}{player.jersey} -{player.name_alt}</td>
                                                     <td>{stat.two_m} - {stat.two_m + stat.two_a}</td>
                                                     <td>{stat.two_m + stat.two_a ? parseFloat(stat.two_m / (stat.two_m + stat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{stat.ft_m} - {stat.ft_m + stat.ft_a}</td>
@@ -900,7 +887,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')}</td>
                                                     <td>{stat.two_m} - {stat.two_m + stat.two_a}</td>
                                                     <td>{stat.two_m + stat.two_a ? parseFloat(stat.two_m / (stat.two_m + stat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{stat.ft_m} - {stat.ft_m + stat.ft_a}</td>
@@ -923,7 +909,6 @@ export default class Boxscore extends React.Component {
                                 })}
                                 <tr>
                                     <th>{zh ? '替補' : 'Sub'}</th>
-                                    <th>{zh ? '時間' : 'Time'}</th>
                                     <th>{zh ? '兩分' : '2Pt'}</th>
                                     <th>{zh ? '兩分%' : '2P%'}</th>
                                     <th>{zh ? '罰球' : 'FT'}</th>
@@ -932,7 +917,7 @@ export default class Boxscore extends React.Component {
                                     <th>{zh ? '三分%' : '3P%'}</th>
                                     <th>{zh ? '籃板' : 'Rebs'}</th>
                                     <th>{zh ? '進攻籃板' : 'O.Rebs'}</th>
-                                    <th>{zh ? '防守籃板' : 'D.Rebs'}</th>                                                
+                                    <th>{zh ? '防守籃板' : 'D.Rebs'}</th>
                                     <th>{zh ? '助攻' : 'Asts'}</th>
                                     <th>{zh ? '抄截' : 'Stls'}</th>
                                     <th>{zh ? '阻攻' : 'Blks'}</th>
@@ -946,7 +931,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(player.seconds).format('mm:ss')}</td>
                                                     <td>{player.two_m} - {player.two_m + player.two_a}</td>
                                                     <td>{player.two_m + player.two_a ? parseFloat(player.two_m / (player.two_m + player.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{player.ft_m} - {player.ft_m + player.ft_a}</td>
@@ -1031,7 +1015,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')}</td>
                                                     <td>{stat.two_m} - {stat.two_m + stat.two_a}</td>
                                                     <td>{stat.two_m + stat.two_a ? parseFloat(stat.two_m / (stat.two_m + stat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{stat.ft_m} - {stat.ft_m + stat.ft_a}</td>
@@ -1074,7 +1057,6 @@ export default class Boxscore extends React.Component {
                                             return (
                                                 <tr key={index}>
                                                     <td>{player.jersey < 10 ? "0" : ""}{player.jersey} - {zh ? player.name_alt : player.name}</td>
-                                                    <td>{moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')}</td>
                                                     <td>{stat.two_m} - {stat.two_m + stat.two_a}</td>
                                                     <td>{stat.two_m + stat.two_a ? parseFloat(stat.two_m / (stat.two_m + stat.two_a) * 100).toFixed(0) + '%' : '---'}</td>
                                                     <td>{stat.ft_m} - {stat.ft_m + stat.ft_a}</td>
@@ -1097,7 +1079,6 @@ export default class Boxscore extends React.Component {
                                 })}
                                 <tr>
                                     <th>TOTALS</th>
-                                    <th></th>
                                     <th>{zh ? '兩分' : '2Pt'}</th>
                                     <th>{zh ? '兩分%' : '2P%'}</th>
                                     <th>{zh ? '罰球' : 'FT'}</th>
@@ -1106,7 +1087,7 @@ export default class Boxscore extends React.Component {
                                     <th>{zh ? '三分%' : '3P%'}</th>
                                     <th>{zh ? '籃板' : 'Rebs'}</th>
                                     <th>{zh ? '進攻籃板' : 'O.Rebs'}</th>
-                                    <th>{zh ? '防守籃板' : 'D.Rebs'}</th>                                                
+                                    <th>{zh ? '防守籃板' : 'D.Rebs'}</th>
                                     <th>{zh ? '助攻' : 'Asts'}</th>
                                     <th>{zh ? '抄截' : 'Stls'}</th>
                                     <th>{zh ? '阻攻' : 'Blks'}</th>
@@ -1115,7 +1096,6 @@ export default class Boxscore extends React.Component {
                                     <th>{zh ? '得分' : 'Pts'}</th>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td></td>
                                     <td>{away_teamstat.two_m} - {away_teamstat.two_m + away_teamstat.two_a}</td>
                                     <td>{away_teamstat.two_m + away_teamstat.two_a ? parseFloat(away_teamstat.two_m / (away_teamstat.two_m + away_teamstat.two_a) * 100).toFixed(0) + '%' : '---'}</td>

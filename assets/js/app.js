@@ -30076,7 +30076,7 @@
 	            var url = api_host + 'games/' + game_id;
 	            $('#js-loading').show();
 	            $.ajax({
-	                url: url, //Temp URL 
+	                url: url, //Temp URL
 	                type: 'GET',
 	                dataType: 'JSON',
 	                success: function (data) {
@@ -30093,7 +30093,7 @@
 	            url = api_host2 + 'games/' + game_id + '/personnel';
 
 	            $.ajax({
-	                url: url, //Temp URL 
+	                url: url, //Temp URL
 	                type: 'GET',
 	                dataType: 'JSON',
 	                success: function (data) {
@@ -30457,11 +30457,6 @@
 	                                        _react2.default.createElement(
 	                                            'th',
 	                                            null,
-	                                            zh ? '時間' : 'Time'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'th',
-	                                            null,
 	                                            zh ? '兩分' : '2Pt'
 	                                        ),
 	                                        _react2.default.createElement(
@@ -30562,11 +30557,6 @@
 	                                                    _react2.default.createElement(
 	                                                        'td',
 	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(player.seconds).format('mm:ss')
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
 	                                                        player.two_m,
 	                                                        ' - ',
 	                                                        player.two_m + player.two_a
@@ -30724,11 +30714,6 @@
 	                                                    _react2.default.createElement(
 	                                                        'td',
 	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
 	                                                        stat.two_m,
 	                                                        ' - ',
 	                                                        stat.two_m + stat.two_a
@@ -30841,11 +30826,6 @@
 	                                                        player.jersey,
 	                                                        ' - ',
 	                                                        zh ? player.name_alt : player.name
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')
 	                                                    ),
 	                                                    _react2.default.createElement(
 	                                                        'td',
@@ -30943,11 +30923,6 @@
 	                                        _react2.default.createElement(
 	                                            'th',
 	                                            null,
-	                                            zh ? '時間' : 'Time'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'th',
-	                                            null,
 	                                            zh ? '兩分' : '2Pt'
 	                                        ),
 	                                        _react2.default.createElement(
@@ -31022,7 +30997,7 @@
 	                                        )
 	                                    ),
 	                                    statlines.map(function (player, index) {
-	                                        if (player.side && !player.starter && player.seconds) {
+	                                        if (player.side && !player.starter) {
 	                                            if (!current_period) {
 	                                                return _react2.default.createElement(
 	                                                    'tr',
@@ -31034,11 +31009,6 @@
 	                                                        player.jersey,
 	                                                        ' - ',
 	                                                        zh ? player.name_alt : player.name
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(player.seconds).format('mm:ss')
 	                                                    ),
 	                                                    _react2.default.createElement(
 	                                                        'td',
@@ -31200,11 +31170,6 @@
 	                                                    _react2.default.createElement(
 	                                                        'td',
 	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
 	                                                        stat.two_m,
 	                                                        ' - ',
 	                                                        stat.two_m + stat.two_a
@@ -31320,11 +31285,6 @@
 	                                                    _react2.default.createElement(
 	                                                        'td',
 	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
 	                                                        stat.two_m,
 	                                                        ' - ',
 	                                                        stat.two_m + stat.two_a
@@ -31415,7 +31375,6 @@
 	                                            null,
 	                                            'TOTALS'
 	                                        ),
-	                                        _react2.default.createElement('th', null),
 	                                        _react2.default.createElement(
 	                                            'th',
 	                                            null,
@@ -31495,7 +31454,6 @@
 	                                    _react2.default.createElement(
 	                                        'tr',
 	                                        null,
-	                                        _react2.default.createElement('td', null),
 	                                        _react2.default.createElement('td', null),
 	                                        _react2.default.createElement(
 	                                            'td',
@@ -31613,11 +31571,6 @@
 	                                        _react2.default.createElement(
 	                                            'th',
 	                                            null,
-	                                            zh ? '時間' : 'Time'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'th',
-	                                            null,
 	                                            zh ? '兩分' : '2Pt'
 	                                        ),
 	                                        _react2.default.createElement(
@@ -31718,11 +31671,6 @@
 	                                                    _react2.default.createElement(
 	                                                        'td',
 	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(player.seconds).format('mm:ss')
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
 	                                                        player.two_m,
 	                                                        ' - ',
 	                                                        player.two_m + player.two_a
@@ -31874,17 +31822,8 @@
 	                                                        null,
 	                                                        player.jersey < 10 ? "0" : "",
 	                                                        player.jersey,
-	                                                        ' - ',
-	                                                        _react2.default.createElement(
-	                                                            _reactRouter.Link,
-	                                                            { to: '/stat/' + player.player_id },
-	                                                            player.name_alt
-	                                                        )
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')
+	                                                        ' -',
+	                                                        player.name_alt
 	                                                    ),
 	                                                    _react2.default.createElement(
 	                                                        'td',
@@ -32001,11 +31940,6 @@
 	                                                        player.jersey,
 	                                                        ' - ',
 	                                                        zh ? player.name_alt : player.name
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')
 	                                                    ),
 	                                                    _react2.default.createElement(
 	                                                        'td',
@@ -32103,11 +32037,6 @@
 	                                        _react2.default.createElement(
 	                                            'th',
 	                                            null,
-	                                            zh ? '時間' : 'Time'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'th',
-	                                            null,
 	                                            zh ? '兩分' : '2Pt'
 	                                        ),
 	                                        _react2.default.createElement(
@@ -32194,11 +32123,6 @@
 	                                                        player.jersey,
 	                                                        ' - ',
 	                                                        zh ? player.name_alt : player.name
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(player.seconds).format('mm:ss')
 	                                                    ),
 	                                                    _react2.default.createElement(
 	                                                        'td',
@@ -32360,11 +32284,6 @@
 	                                                    _react2.default.createElement(
 	                                                        'td',
 	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
 	                                                        stat.two_m,
 	                                                        ' - ',
 	                                                        stat.two_m + stat.two_a
@@ -32480,11 +32399,6 @@
 	                                                    _react2.default.createElement(
 	                                                        'td',
 	                                                        null,
-	                                                        moment("2016-01-01").startOf('day').seconds(stat.seconds).format('mm:ss')
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'td',
-	                                                        null,
 	                                                        stat.two_m,
 	                                                        ' - ',
 	                                                        stat.two_m + stat.two_a
@@ -32575,7 +32489,6 @@
 	                                            null,
 	                                            'TOTALS'
 	                                        ),
-	                                        _react2.default.createElement('th', null),
 	                                        _react2.default.createElement(
 	                                            'th',
 	                                            null,
@@ -32655,7 +32568,6 @@
 	                                    _react2.default.createElement(
 	                                        'tr',
 	                                        null,
-	                                        _react2.default.createElement('td', null),
 	                                        _react2.default.createElement('td', null),
 	                                        _react2.default.createElement(
 	                                            'td',
